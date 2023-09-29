@@ -18,7 +18,7 @@ elif (len(ax)==9):
 ```
 ## Extract mass and momentum (p<sub>x</sub>,p<sub>y</sub>,p<sub>z</sub>) values of decay particles
 Decay modes of k* :<br/>
-$k^* \rightarrow k^- + \pi^+$
+$k^* \rightarrow k^+ + \pi^-$
 $k^* \rightarrow k^- + \pi^+$
 So we need to store m,p<sub>x</sub>,p<sub>y</sub>,p<sub>z</sub> values of corresponding aprticle ID's ($k^+ =321$, $\pi^- =-221$, $k^- =-321$, $\pi^+ =221$) <br/>
 We apply loop for $k^+$ as :
@@ -32,7 +32,7 @@ if (float(ax[0])==321):
 ```
 Similarly, we extract values for $\pi^-$, $k^-$, $\pi^+$.
 ## Particle counts for unsimilar charge pairs :
-For $k^- + \pi^+$ the net invariant mass is counted in bins as :
+For $k^+ + \pi^-$ the net invariant mass is counted in bins as :
 ```
 for i in range(0,len(par_array_m1)):
                 E1 = (np.sqrt(float(par_array_px1[i])**2+float(par_array_py1[i])**2+float(par_array_pz1[i])**2+float(par_array_m1[i])**2))
@@ -82,4 +82,19 @@ for i in range(0,len(par_array_m1)):
                     elif (m1_m2>3.8 and m1_m2<=4.0):
                         count1[19]+=1
 ```
-Simillarly, we find counts for $k^- + \pi^+$.
+Simillarly, we find bin counts for $k^- + \pi^+$. Then we perform addition of these contributions due to opposite charge particles pairs.
+```
+count1_2_opp=np.add(count1,count2)
+```
+## Particle counts for similar charge pairs :
+For $k^+ + \pi^+$, $k^- + \pi^-$  the net invariant mass is counted in bins as the code on the previous sub-section. Then we find the summation of total counts due to similar charged pairs.
+```
+count3_4_sim=np.add(count3,count4)
+```
+## Particle counts for K<sup>*<\sup> :
+To find the original counts for K<sup>*<\sup> substract the no. of counts due to similar charged pairs from the no. of counts due to opposite charged pairs.
+```
+count_final=np.subtract(count1_2_opp,count3_4_sim)
+print "Invariant mass of kaon star :"
+print (count_final)
+```
