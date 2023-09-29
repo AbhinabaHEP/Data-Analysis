@@ -17,5 +17,4 @@ To read particle information for particle IDs under a particular event :
 elif (len(ax)==9):
 ```
 ## Extract mass and momentum (px,py,pz) values of decay particles
-K* decays into :
-1) $k^+ + \pi^-$
+$k* \rightarrow k^+ + \pi^-$
