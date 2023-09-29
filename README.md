@@ -17,7 +17,7 @@ To read particle information for particle IDs under a particular event :
 elif (len(ax)==9):
 ```
 ## Extract mass and momentum (p<sub>x</sub>,p<sub>y</sub>,p<sub>z</sub>) values of decay particles
-Decay modes of k<sup>*<\sup>
+Decay modes of k*
 $k^* \rightarrow k^- + \pi^+$
 $k^* \rightarrow k^- + \pi^+$
 So we need to store m,p<sub>x</sub>,p<sub>y</sub>,p<sub>z</sub> values of corresponding aprticle ID's [$k^+ =321$, $\pi^- =-221$, $k^- =-321$, $\pi^+ =221$]
