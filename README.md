@@ -18,4 +18,4 @@ elif (len(ax)==9):
 ```
 ## Extract mass and momentum (px,py,pz) values of decay particles
 K* decays into :
-1) K+ + Greek small letter pi
+1) K+ + &pi
