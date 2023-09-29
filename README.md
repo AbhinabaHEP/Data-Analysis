@@ -5,3 +5,14 @@ Data Analysis for reconstructed K* decay modes.
 with open('ampt.dat') as f:
 lines = f.readlines()
 ```
+To read a line that denotes an event:
+```
+for line in lines:
+        count_lines = count_lines+1
+        ax = line.split()
+        if (len(ax) ==11):
+```
+To read particle information for particle IDs under a particular event :
+```
+elif (len(ax)==9):
+```
