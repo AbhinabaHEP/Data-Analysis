@@ -20,7 +20,7 @@ elif (len(ax)==9):
 Decay modes of k* :<br/>
 $k^* \rightarrow k^- + \pi^+$
 $k^* \rightarrow k^- + \pi^+$
-So we need to store m,p<sub>x</sub>,p<sub>y</sub>,p<sub>z</sub> values of corresponding aprticle ID's (k <sup>+<\sup> =321, $\pi^- =-221$, $k^- =-321$, $\pi^+ =221$)
+So we need to store m,p<sub>x</sub>,p<sub>y</sub>,p<sub>z</sub> values of corresponding aprticle ID's (k <sup>+</sup> =321, $\pi^- =-221$, $k^- =-321$, $\pi^+ =221$)
 We apply loop for $k^+$ as :
 ```
 if (float(ax[0])==321):
