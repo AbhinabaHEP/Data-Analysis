@@ -16,5 +16,17 @@ To read particle information for particle IDs under a particular event :
 ```
 elif (len(ax)==9):
 ```
-## Extract mass and momentum (px,py,pz) values of decay particles
-$k* \rightarrow k^+ + \pi^-$
+## Extract mass and momentum ($p_x,p_y,p_z$) values of decay particles
+Decay modes of $k^*$
+$k^* \rightarrow k^+ + \pi^-$
+$k^* \rightarrow k^- + \pi^+$
+So we need to store $ m,p_x,p_y,p_z$ values of corresponding aprticle ID's [$k^+ =321$, $\pi^- =-221$, $k^- =-321$, $\pi^+ =221$]
+We apply loop for $k^+$ as :
+```
+if (float(ax[0])==321):
+                par_array_m1.append(float(ax[4]))
+                #par_array_pt1.append(np.sqrt(float(ax[1])**2 + float(ax[2])**2))
+                par_array_pz1.append(float(ax[3]))
+                par_array_py1.append(float(ax[2]))
+                par_array_px1.append(float(ax[1]))
+```
